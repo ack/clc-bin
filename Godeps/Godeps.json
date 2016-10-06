@@ -1,0 +1,55 @@
+{
+	"ImportPath": "github.com/ack/clc-bin",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/CenturyLinkCloud/clc-sdk",
+			"Comment": "0.0.2-30-ga9fa34e",
+			"Rev": "a9fa34e3392fbe61aee146e90a106fad59a6013c"
+		},
+		{
+			"ImportPath": "github.com/CenturyLinkCloud/clc-sdk/aa",
+			"Comment": "0.0.2-30-ga9fa34e",
+			"Rev": "a9fa34e3392fbe61aee146e90a106fad59a6013c"
+		},
+		{
+			"ImportPath": "github.com/CenturyLinkCloud/clc-sdk/alert",
+			"Comment": "0.0.2-30-ga9fa34e",
+			"Rev": "a9fa34e3392fbe61aee146e90a106fad59a6013c"
+		},
+		{
+			"ImportPath": "github.com/CenturyLinkCloud/clc-sdk/api",
+			"Comment": "0.0.2-30-ga9fa34e",
+			"Rev": "a9fa34e3392fbe61aee146e90a106fad59a6013c"
+		},
+		{
+			"ImportPath": "github.com/CenturyLinkCloud/clc-sdk/dc",
+			"Comment": "0.0.2-30-ga9fa34e",
+			"Rev": "a9fa34e3392fbe61aee146e90a106fad59a6013c"
+		},
+		{
+			"ImportPath": "github.com/CenturyLinkCloud/clc-sdk/group",
+			"Comment": "0.0.2-30-ga9fa34e",
+			"Rev": "a9fa34e3392fbe61aee146e90a106fad59a6013c"
+		},
+		{
+			"ImportPath": "github.com/CenturyLinkCloud/clc-sdk/lb",
+			"Comment": "0.0.2-30-ga9fa34e",
+			"Rev": "a9fa34e3392fbe61aee146e90a106fad59a6013c"
+		},
+		{
+			"ImportPath": "github.com/CenturyLinkCloud/clc-sdk/server",
+			"Comment": "0.0.2-30-ga9fa34e",
+			"Rev": "a9fa34e3392fbe61aee146e90a106fad59a6013c"
+		},
+		{
+			"ImportPath": "github.com/CenturyLinkCloud/clc-sdk/status",
+			"Comment": "0.0.2-30-ga9fa34e",
+			"Rev": "a9fa34e3392fbe61aee146e90a106fad59a6013c"
+		}
+	]
+}
