@@ -30,4 +30,4 @@ the requested ports are opened on the targeted NIC.
 
 ## invocation
 
-`./natip -username XYZ -pasword XYZ -server ALIAS-NODE-01 -ports "TCP/80 TCP/22" -silent`
+`./natip -username XYZ -password XYZ -server ALIAS-NODE-01 -ports "TCP/80 TCP/22" -silent`

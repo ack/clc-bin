@@ -18,6 +18,7 @@ ospairs = [
 binaries = [
   ['natip', 'bin/natip/main.go'],
   ['baremetal-info', 'bin/natip/main.go'],
+  ['apiv1', 'bin/apiv1/main.go'],
 ]
 
 binaries.each do |basename, path|
