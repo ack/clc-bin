@@ -42,9 +42,13 @@ func main() {
 	}
 	cookie, _ := login(*key, *pw)
 
-	buf, err := ioutil.ReadAll(os.Stdin)
-	if err != nil {
-		log.Panic("Failed reading body content")
+	var buf []byte
+	var err error
+	if *method != "GET" {
+		buf, err = ioutil.ReadAll(os.Stdin)
+		if err != nil {
+			log.Panic("Failed reading body content")
+		}
 	}
 	*method = strings.ToUpper(*method)
 	fmt.Fprintf(os.Stderr, "[%s] %s ... ", *method, *endpoint)
