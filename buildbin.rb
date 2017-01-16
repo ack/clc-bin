@@ -27,7 +27,9 @@ binaries.each do |basename, path|
   ospairs.each do |os, arch, extension|
     cmd = "docker run --rm -it " +
           "-e GOOS=#{os} -e GOARCH=#{arch} " +
-          "-v #{pwd}:/go/src/#{gopkg} -w /go/src/#{gopkg} " +
+          "-v #{pwd}/bin:/go/src/#{gopkg}/bin " + 
+          "-v #{pwd}/../../CenturyLinkCloud/clc-sdk:/go/src/#{gopkg} " + 
+          "-w /go/src/#{gopkg} " +
           "golang:1.7 go build -o #{dist}/#{basename}#{extension} #{path}"
     puts "BUILD: #{cmd}"
     puts `#{cmd}`
