@@ -22,6 +22,11 @@ binaries = [
   ['apiv2', 'bin/apiv2/main.go'],
 ]
 
+if ARGV
+  binaries.select! {|b| ARGV.include?(b.first)}
+end
+
+
 binaries.each do |basename, path|
   puts "== building #{basename}"
   ospairs.each do |os, arch, extension|

@@ -18,13 +18,16 @@ func login(key, pass string) (*http.Cookie, error) {
 	reader := bytes.NewBufferString(payload)
 	resp, err := http.Post(endpoint, "application/json", reader)
 	if err != nil {
-		log.Panicf("Failed authenticating: %s", resp.Body)
+		log.Panicf("Failed authenticating: %s", err)
 	}
 	for _, c := range resp.Cookies() {
 		if c.Name == "Tier3.API.Cookie" {
 			return c, nil
 		}
 	}
+	io.Copy(os.Stderr, resp.Body)
+	fmt.Fprintf(os.Stderr, "\n")
+	panic("ERROR: Failed authenticating. check credentials")
 	return nil, nil
 }
 
