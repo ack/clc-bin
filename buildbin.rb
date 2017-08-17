@@ -5,8 +5,6 @@ pwd = `pwd`.strip
 dist = './dist'
 `mkdir -p #{dist}`
 
-`git submodule update vendor`
-
 gopkg = 'github.com/CenturyLinkCloud/clc-sdk'
 
 ospairs = [
@@ -22,7 +20,7 @@ binaries = [
   ['apiv2', 'bin/apiv2/main.go'],
 ]
 
-if ARGV
+if ARGV.length > 0
   binaries.select! {|b| ARGV.include?(b.first)}
 end
 
