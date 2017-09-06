@@ -36,6 +36,7 @@ func main() {
 	pw := flag.String("pass", "", "password")
 	method := flag.String("method", "", "http method")
 	endpoint := flag.String("endpoint", "", "endpoint")
+	auth := flag.Bool("auth", false, "test credentials")
 	flag.Parse()
 	if *key == "" {
 		log.Panic("missing flag -key")
@@ -44,6 +45,11 @@ func main() {
 		log.Panic("missing flag -pass")
 	}
 	cookie, _ := login(*key, *pw)
+	if *auth {
+		// NO-OP if we're just checking credentials
+		fmt.Fprintf(os.Stderr, "authentication successful")
+		return
+	}
 
 	var buf []byte
 	var err error
